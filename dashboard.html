@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KejaHub | Landlord Dashboard</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- =========================
+    SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <a href="index.html" class="logo">
+                <span>Keja</span>Hub
+            </a>
+
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <button class="nav-item active" data-page="overview">
+
+                <i class="bi bi-grid"></i>
+
+                <span>Dashboard</span>
+
+            </button>
+
+
+            <button class="nav-item" data-page="properties">
+
+                <i class="bi bi-house-door"></i>
+
+                <span>My Properties</span>
+
+            </button>
+
+
+            <a href="add-property.html" class="nav-item">
+
+                <i class="bi bi-plus-circle"></i>
+
+                <span>Add Property</span>
+
+            </a>
+
+
+            <button class="nav-item" data-page="requests">
+
+                <i class="bi bi-calendar-check"></i>
+
+                <span>Requests</span>
+
+                <span class="nav-badge" id="requestBadge">0</span>
+
+            </button>
+
+
+            <button class="nav-item" data-page="messages">
+
+                <i class="bi bi-chat-left-text"></i>
+
+                <span>Messages</span>
+
+                <span class="nav-badge">2</span>
+
+            </button>
+
+
+            <button class="nav-item" data-page="profile">
+
+                <i class="bi bi-person"></i>
+
+                <span>Profile</span>
+
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="back-home">
+
+                <i class="bi bi-arrow-left"></i>
+
+                Back to KejaHub
+
+            </a>
+
+
+            <button class="logout-btn" id="logoutBtn">
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================
+    MAIN CONTENT
+    ========================== -->
+
+    <main class="content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <div>
+
+                    <p class="page-label">Landlord workspace</p>
+
+                    <h2 id="pageTitle">
+                        Dashboard
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button class="notification-btn">
+
+                    <i class="bi bi-bell"></i>
+
+                    <span></span>
+
+                </button>
+
+
+                <button
+                    class="user-profile"
+                    data-open-page="profile">
+
+                    <div class="avatar" id="userAvatar">
+                        U
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong id="topbarUser">
+                            User
+                        </strong>
+
+                        <span>
+                            Landlord
+                        </span>
+
+                    </div>
+
+                    <i class="bi bi-chevron-down"></i>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+        DASHBOARD OVERVIEW
+        ========================== -->
+
+        <section class="dashboard-page active" id="overviewPage">
+
+
+            <!-- WELCOME -->
+
+            <div class="welcome-card">
+
+                <div>
+
+                    <span class="welcome-tag">
+                        Property Management
+                    </span>
+
+                    <h1 id="welcomeUser">
+                        Welcome back
+                    </h1>
+
+                    <p>
+                        Here's what's happening with your
+                        KejaHub properties today.
+                    </p>
+
+                </div>
+
+
+                <a href="add-property.html" class="primary-btn">
+
+                    <i class="bi bi-plus-lg"></i>
+
+                    Add Property
+
+                </a>
+
+            </div>
+
+
+
+            <!-- STATS -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-buildings"></i>
+                    </div>
+
+                    <div>
+
+                        <span>Total Properties</span>
+
+                        <h3 id="totalProperties">0</h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-eye"></i>
+                    </div>
+
+                    <div>
+
+                        <span>Total Views</span>
+
+                        <h3 id="totalViews">0</h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
+
+                    <div>
+
+                        <span>Viewing Requests</span>
+
+                        <h3 id="totalRequests">0</h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-check-circle"></i>
+                    </div>
+
+                    <div>
+
+                        <span>Available</span>
+
+                        <h3 id="activeProperties">0</h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RECENT PROPERTIES -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span>Portfolio</span>
+
+                        <h3>Recent Properties</h3>
+
+                    </div>
+
+                    <button
+                        class="text-btn"
+                        data-open-page="properties">
+
+                        View all
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="recentPropertyList"
+                    class="property-grid">
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+        MY PROPERTIES
+        ========================== -->
+
+        <section class="dashboard-page" id="propertiesPage">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span>Your portfolio</span>
+
+                    <h1>My Properties</h1>
+
+                    <p>
+                        Manage all your property listings.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="add-property.html"
+                    class="primary-btn">
+
+                    <i class="bi bi-plus-lg"></i>
+
+                    Add Property
+
+                </a>
+
+            </div>
+
+
+            <div class="property-toolbar">
+
+                <div class="dashboard-search">
+
+                    <i class="bi bi-search"></i>
+
+                    <input
+                        type="text"
+                        id="propertySearch"
+                        placeholder="Search your properties...">
+
+                </div>
+
+
+                <select id="propertyStatusFilter">
+
+                    <option value="all">
+                        All Properties
+                    </option>
+
+                    <option value="available">
+                        Available
+                    </option>
+
+                    <option value="unavailable">
+                        Unavailable
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                id="allPropertyList"
+                class="property-grid">
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+        REQUESTS
+        ========================== -->
+
+        <section class="dashboard-page" id="requestsPage">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span>Property viewings</span>
+
+                    <h1>Viewing Requests</h1>
+
+                    <p>
+                        Review and manage tenant viewing requests.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="requests-list"
+                id="requestsList">
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+        MESSAGES
+        ========================== -->
+
+        <section class="dashboard-page" id="messagesPage">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span>Conversations</span>
+
+                    <h1>Messages</h1>
+
+                    <p>
+                        Keep in touch with potential tenants.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="messages-layout">
+
+
+                <!-- CONVERSATIONS -->
+
+                <div class="conversation-list">
+
+                    <div
+                        class="conversation active"
+                        data-name="Brian Otieno">
+
+                        <div class="message-avatar">
+                            BO
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Brian Otieno
+                            </strong>
+
+                            <p>
+                                Is the apartment still available?
+                            </p>
+
+                        </div>
+
+                        <span>
+                            10:32
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="conversation"
+                        data-name="Faith Achieng">
+
+                        <div class="message-avatar">
+                            FA
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Faith Achieng
+                            </strong>
+
+                            <p>
+                                I'd like to schedule a viewing.
+                            </p>
+
+                        </div>
+
+                        <span>
+                            Yesterday
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CHAT -->
+
+                <div class="chat-box">
+
+                    <div class="chat-header">
+
+                        <div class="message-avatar">
+                            BO
+                        </div>
+
+                        <div>
+
+                            <strong id="chatName">
+                                Brian Otieno
+                            </strong>
+
+                            <span>
+                                Property inquiry
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chat-messages" id="chatMessages">
+
+                        <div class="message received">
+
+                            Hello, is the apartment
+                            in Milimani still available?
+
+                        </div>
+
+
+                        <div class="message sent">
+
+                            Hello! Yes, it is currently
+                            available.
+
+                        </div>
+
+                    </div>
+
+
+                    <form
+                        class="message-form"
+                        id="messageForm">
+
+                        <input
+                            type="text"
+                            id="messageInput"
+                            placeholder="Write a message..."
+                            required>
+
+                        <button type="submit">
+
+                            <i class="bi bi-send"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+        PROFILE
+        ========================== -->
+
+        <section class="dashboard-page" id="profilePage">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span>Account settings</span>
+
+                    <h1>My Profile</h1>
+
+                    <p>
+                        Manage your personal and contact information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-card">
+
+                <div class="profile-header">
+
+                    <div
+                        class="large-avatar"
+                        id="profileAvatar">
+
+                        U
+
+                    </div>
+
+                    <div>
+
+                        <h3 id="profileDisplayName">
+                            User
+                        </h3>
+
+                        <p>
+                            KejaHub Landlord
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="profileForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label>Full Name</label>
+
+                            <input
+                                type="text"
+                                id="profileName"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Email Address</label>
+
+                            <input
+                                type="email"
+                                id="profileEmail">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Phone Number</label>
+
+                            <input
+                                type="tel"
+                                id="profilePhone">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Location</label>
+
+                            <input
+                                type="text"
+                                id="profileLocation"
+                                placeholder="Kisumu, Kenya">
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn">
+
+                        Save Changes
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div class="dashboard-toast" id="dashboardToast">
+
+    <i class="bi bi-check-circle"></i>
+
+    <span id="toastMessage">
+        Changes saved
+    </span>
+
+</div>
+
+
+
+<!-- IMPORTANT SCRIPT ORDER -->
+
+<script src="data/properties.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

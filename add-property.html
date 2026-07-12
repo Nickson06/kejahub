@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+KejaHub | Add Property
+</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="css/add-property.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="wizard-container">
+
+    <div class="wizard-card">
+
+        <div class="brand">
+
+            <span>Keja</span>Hub
+
+        </div>
+
+        <h2>List Your Property</h2>
+
+        <p>Create a professional listing in a few simple steps.</p>
+
+        <!-- Progress -->
+
+        <div class="progress-wrapper">
+
+            <div id="progressBar"></div>
+
+        </div>
+
+        <!-- STEP 1 -->
+
+        <div class="step active">
+
+            <h3>Basic Information</h3>
+
+            <div class="form-group">
+
+                <label>Property Name</label>
+
+                <input id="title" type="text">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Property Type</label>
+
+                <select id="category">
+
+                    <option>Apartment</option>
+                    <option>House</option>
+                    <option>Studio</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <!-- STEP 2 -->
+
+        <div class="step">
+
+            <h3>Location</h3>
+
+            <div class="form-group">
+
+                <label>County</label>
+
+                <input id="county">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Area</label>
+
+                <input id="area">
+
+            </div>
+
+        </div>
+
+        <!-- STEP 3 -->
+
+        <div class="step">
+
+            <h3>Property Details</h3>
+
+            <div class="row">
+
+                <div class="col">
+
+                    <label>Rent</label>
+
+                    <input id="price" type="number">
+
+                </div>
+
+                <div class="col">
+
+                    <label>Bedrooms</label>
+
+                    <input id="bedrooms" type="number">
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Description</label>
+
+                <textarea id="description"></textarea>
+
+            </div>
+
+        </div>
+
+        <!-- STEP 4 -->
+
+        <div class="step">
+
+            <h3>Property Photo</h3>
+
+            <p>Select an image from your computer.</p>
+
+            <input
+                id="imageUpload"
+                type="file"
+                accept="image/*">
+
+            <div class="preview">
+
+                <img id="previewImage">
+
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+
+        <div class="wizard-buttons">
+
+            <button id="prevBtn">
+
+                Previous
+
+            </button>
+
+            <button id="nextBtn">
+
+                Next
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/add-property.js"></script>
+
+
+</body>
+
+
+</html>

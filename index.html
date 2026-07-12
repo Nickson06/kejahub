@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KejaHub | Find Your Perfect Home</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- ==========================
+NAVBAR
+=========================== -->
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            <span>Keja</span>Hub
+        </a>
+
+        <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="#locations">
+
+                        Explore
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="listings.html">
+
+                        Properties
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#"
+                        id="add-property.html">
+
+                        List Property
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a
+                        href="login.html"
+                        class="btn btn-primary ms-lg-3">
+
+                        Login
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-blur hero-blur-1"></div>
+    <div class="hero-blur hero-blur-2"></div>
+
+    <div class="container hero-content">
+
+        <div class="row align-items-center">
+
+            <!-- LEFT -->
+
+            <div class="col-lg-6">
+
+                <span class="hero-badge">
+
+                    <i class="bi bi-patch-check-fill"></i>
+
+                    Kenya's Trusted Property Marketplace
+
+                </span>
+
+                <h1>
+
+                    Find Your
+
+                    <span>Perfect Home</span>
+
+                    Without The Stress.
+
+                </h1>
+
+                <p>
+
+                    Browse verified apartments, studios and houses across Kenya.
+                    Secure viewings, trusted landlords and modern living—all in one place.
+
+                </p>
+
+                <!-- SEARCH -->
+
+                <div class="search-box">
+
+                    <div>
+
+                        <label>Location</label>
+
+                        <input id="searchLocation" placeholder="Nairobi">
+
+                    </div>
+
+                    <div>
+
+                        <label>Property</label>
+
+                        <select id="searchCategory">
+
+                            <option value="">Any</option>
+                            <option>Apartment</option>
+                            <option>House</option>
+                            <option>Studio</option>
+
+                        </select>
+
+                    </div>
+
+                    <button id="searchBtn">
+
+                        <i class="bi bi-search"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="hero-stats">
+
+                    <div>
+
+                        <h3>3,500+</h3>
+
+                        <small>Happy Renters</small>
+
+                    </div>
+
+                    <div>
+
+                        <h3>850+</h3>
+
+                        <small>Verified Landlords</small>
+
+                    </div>
+
+                    <div>
+
+                        <h3>47</h3>
+
+                        <small>Counties</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="col-lg-6">
+
+                <div class="hero-property">
+
+                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
+
+                    <div class="property-floating">
+
+                        <span class="available">
+
+                            ● Available
+
+                        </span>
+
+                        <h4>
+
+                            Luxury Apartment
+
+                        </h4>
+
+                        <p>
+
+                            Kilimani • Nairobi
+
+                        </p>
+
+                        <div class="hero-price">
+
+                            KES 48,000/mo
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ======================================
+POPULAR DESTINATIONS
+====================================== -->
+
+<section class="locations" id="locations">
+
+<div class="container">
+
+<div class="section-title">
+
+<span class="section-tag">
+
+Popular Destinations
+
+</span>
+
+<h2>
+
+Explore Kenya's Best Places To Live
+
+</h2>
+
+<p>
+
+Find verified homes in Kenya's fastest-growing towns and cities.
+
+</p>
+
+</div>
+
+<div
+
+class="row g-4"
+
+id="locationContainer">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+FEATURED HOMES
+=========================== -->
+<section class="featured py-5">
+
+<div class="container">
+
+<div class="section-title">
+
+<span class="section-tag">
+
+Featured Collection
+
+</span>
+
+<h2>
+
+Handpicked Homes You'll Love
+
+</h2>
+
+<p>
+
+Browse our latest verified apartments, studios and family homes.
+
+</p>
+
+</div>
+
+<div class="row g-4" id="featuredHomes">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="why-us py-5">
+
+<div class="container">
+
+<div class="section-title text-center mb-5">
+
+<h2>Why Choose KejaHub?</h2>
+
+<p>Designed to make finding and listing rental homes simple, secure and stress-free.</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-3 col-md-6">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+<i class="bi bi-patch-check-fill"></i>
+</div>
+
+<h5>Verified Listings</h5>
+
+<p>
+Every listing goes through moderation to improve trust and reduce scams.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+<i class="bi bi-shield-lock-fill"></i>
+</div>
+
+<h5>Secure Platform</h5>
+
+<p>
+Landlords and tenants interact in one secure environment.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+<i class="bi bi-house-heart-fill"></i>
+</div>
+
+<h5>Quality Homes</h5>
+
+<p>
+Discover apartments, studios and family homes across Kenya.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+<i class="bi bi-geo-alt-fill"></i>
+</div>
+
+<h5>Nationwide</h5>
+
+<p>
+Browse homes in Nairobi, Kisumu, Mombasa and many more counties.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="how-it-works py-5">
+
+<div class="container">
+
+<div class="section-title text-center">
+
+<h2>How KejaHub Works</h2>
+
+<p>Find your next home in four easy steps.</p>
+
+</div>
+
+<div class="row text-center mt-5">
+
+<div class="col-md-3">
+
+<div class="step-card">
+
+<div class="step-number">1</div>
+
+<h5>Search</h5>
+
+<p>Search by county, town and budget.</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="step-card">
+
+<div class="step-number">2</div>
+
+<h5>Explore</h5>
+
+<p>View verified homes with beautiful photos.</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="step-card">
+
+<div class="step-number">3</div>
+
+<h5>Request Viewing</h5>
+
+<p>Book a viewing directly through KejaHub.</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="step-card">
+
+<div class="step-number">4</div>
+
+<h5>Move In</h5>
+
+<p>Choose your perfect home with confidence.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+RECENTLY ADDED HOMES
+========================================== -->
+
+<section class="recent-properties">
+
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center mb-5">
+
+            <div>
+
+                <span class="section-tag">
+
+                    Recently Added
+
+                </span>
+
+                <h2>
+
+                    Fresh Homes Waiting For You
+
+                </h2>
+
+                <p>
+
+                    Explore the newest verified listings across Kenya.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <button class="carousel-btn" id="recentPrev">
+
+                    <i class="bi bi-arrow-left"></i>
+
+                </button>
+
+                <button class="carousel-btn" id="recentNext">
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="recent-wrapper">
+
+            <div id="recentSlider" class="recent-slider">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="stats-section">
+
+<div class="container">
+
+<div class="row text-center">
+
+<div class="col-md-3">
+
+<h2 id="propertyCount">
+
+0
+
+</h2>
+
+<p>
+
+Properties
+
+</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h2 id="countyCount">
+
+0
+
+</h2>
+
+<p>
+
+Counties
+
+</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h2 id="landlordCount">
+
+0
+
+</h2>
+
+<p>
+
+Landlords
+
+</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h2>
+
+98%
+
+</h2>
+
+<p>
+
+Customer Satisfaction
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+TESTIMONIALS
+========================================== -->
+
+<section class="testimonials">
+
+<div class="container">
+
+<div class="section-title">
+
+<span class="section-tag">
+
+Testimonials
+
+</span>
+
+<h2>
+
+What Our Community Says
+
+</h2>
+
+<p>
+
+Real experiences from tenants and landlords.
+
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="testimonial-card">
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+"I found my apartment in less than three days. The photos matched exactly what I found during the viewing."
+
+</p>
+
+<div class="client">
+
+<img src="https://i.pravatar.cc/100?img=32">
+
+<div>
+
+<h5>Brian O.</h5>
+
+<small>Nairobi</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="testimonial-card">
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+"As a landlord, I listed my property once and received several genuine viewing requests within a week."
+
+</p>
+
+<div class="client">
+
+<img src="https://i.pravatar.cc/100?img=18">
+
+<div>
+
+<h5>Mercy A.</h5>
+
+<small>Kisumu</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="testimonial-card">
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+"Simple to use, clean interface, and the listings felt trustworthy. I'd definitely recommend KejaHub."
+
+</p>
+
+<div class="client">
+
+<img src="https://i.pravatar.cc/100?img=12">
+
+<div>
+
+<h5>Kevin M.</h5>
+
+<small>Mombasa</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+
+Frequently Asked Questions
+
+</h2>
+
+</div>
+
+<div class="accordion" id="faqAccordion">
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button class="accordion-button"
+
+data-bs-toggle="collapse"
+
+data-bs-target="#faq1">
+
+How do I list my property?
+
+</button>
+
+</h2>
+
+<div id="faq1"
+
+class="accordion-collapse collapse show"
+
+data-bs-parent="#faqAccordion">
+
+<div class="accordion-body">
+
+Create a landlord account, complete your profile, then publish your property in minutes.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button class="accordion-button collapsed"
+
+data-bs-toggle="collapse"
+
+data-bs-target="#faq2">
+
+Are the listings verified?
+
+</button>
+
+</h2>
+
+<div id="faq2"
+
+class="accordion-collapse collapse"
+
+data-bs-parent="#faqAccordion">
+
+<div class="accordion-body">
+
+Our moderation process helps ensure quality and reduce fraudulent listings.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button class="accordion-button collapsed"
+
+data-bs-toggle="collapse"
+
+data-bs-target="#faq3">
+
+Is KejaHub free?
+
+</button>
+
+</h2>
+
+<div id="faq3"
+
+class="accordion-collapse collapse"
+
+data-bs-parent="#faqAccordion">
+
+<div class="accordion-body">
+
+Searching for rental properties is free. Listing plans can be introduced as the platform grows.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="cta-section">
+
+<div class="container">
+
+<div class="cta-box">
+
+<h2>Own Rental Property?</h2>
+
+<p>
+
+Reach thousands of tenants looking for homes across Kenya.
+
+</p>
+
+<a href="register.html" class="btn btn-warning">
+
+Start Listing Today
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+<footer class="footer">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-4">
+
+<h3>
+
+<span style="color:#D4A017;">Keja</span>Hub
+
+</h3>
+
+<p>
+
+Helping Kenyans discover quality rental homes with confidence.
+
+</p>
+
+</div>
+
+<div class="col-lg-2">
+
+<h5>
+
+Company
+
+</h5>
+
+<ul>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Careers</a></li>
+
+<li><a href="#">Blog</a></li>
+
+</ul>
+
+</div>
+
+<div class="col-lg-2">
+
+<h5>
+
+Explore
+
+</h5>
+
+<ul>
+
+<li><a href="#">Homes</a></li>
+
+<li><a href="#">Landlords</a></li>
+
+<li><a href="#">Support</a></li>
+
+</ul>
+
+</div>
+
+<div class="col-lg-4">
+
+<h5>
+
+Stay Updated
+
+</h5>
+
+<div class="newsletter">
+
+<input
+
+type="email"
+
+placeholder="Email Address">
+
+<button>
+
+Subscribe
+
+</button>
+
+</div>
+
+<div class="socials mt-4">
+
+<i class="bi bi-facebook"></i>
+
+<i class="bi bi-instagram"></i>
+
+<i class="bi bi-twitter-x"></i>
+
+<i class="bi bi-linkedin"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="text-center">
+
+© 2026 KejaHub. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- Bootstrap -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Data -->
+
+<script src="data/properties.js"></script>
+
+<!-- Storage -->
+
+<script src="js/storage.js"></script>
+
+<!-- Homepage -->
+
+<script src="js/app.js"></script>
+
+<script src="js/utils.js"></script>
+<script src="js/ui.js"></script>
+
+</body>
+
+</html>
