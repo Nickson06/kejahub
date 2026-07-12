@@ -1,1 +1,607 @@
+/* =========================================
+KEJAHUB LISTINGS
+========================================= */
 
+:root {
+    --primary: #0f3d2e;
+    --primary-light: #eaf2ee;
+    --gold: #d4a017;
+    --background: #f7f7f3;
+    --white: #ffffff;
+    --text: #17211d;
+    --muted: #758079;
+    --border: #e6e9e7;
+}
+
+body {
+    background: var(--background);
+}
+
+
+/* =========================================
+NAVBAR
+========================================= */
+
+.listings-navbar {
+    background: var(--white);
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.listings-navbar .navbar-brand {
+    color: var(--primary) !important;
+}
+
+.listings-navbar .navbar-brand span {
+    color: var(--gold);
+}
+
+.listings-navbar .nav-link {
+    color: #4c5752 !important;
+}
+
+.listings-navbar .nav-link:hover,
+.listings-navbar .nav-link.active {
+    color: var(--primary) !important;
+}
+
+.login-btn {
+    background: var(--primary);
+    color: white;
+    border-radius: 50px;
+    padding: 11px 22px;
+}
+
+.login-btn:hover {
+    background: #092b20;
+    color: white;
+}
+
+
+/* =========================================
+HEADER
+========================================= */
+
+.listings-header {
+    padding: 85px 0 110px;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(212, 160, 23, .16),
+            transparent 25%
+        ),
+        var(--primary);
+
+    color: white;
+}
+
+.page-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.listings-header h1 {
+    max-width: 700px;
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.08;
+    font-weight: 700;
+}
+
+.listings-header h1 span {
+    color: var(--gold);
+}
+
+.listings-header p {
+    max-width: 600px;
+    color: rgba(255, 255, 255, .72);
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+
+/* =========================================
+SEARCH
+========================================= */
+
+.search-area {
+    margin-top: -48px;
+    position: relative;
+    z-index: 10;
+}
+
+.listing-search {
+    background: white;
+    border-radius: 24px;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr auto;
+    align-items: center;
+    box-shadow: 0 20px 60px rgba(20, 40, 30, .12);
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 20px;
+    border-right: 1px solid var(--border);
+}
+
+.search-field > i {
+    font-size: 21px;
+    color: var(--primary);
+}
+
+.search-field div {
+    width: 100%;
+}
+
+.search-field label {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 2px;
+}
+
+.search-field select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.search-btn {
+    border: none;
+    background: var(--primary);
+    color: white;
+    padding: 17px 27px;
+    border-radius: 16px;
+    font-weight: 600;
+}
+
+.search-btn:hover {
+    background: #092b20;
+}
+
+
+/* =========================================
+MAIN
+========================================= */
+
+.listings-section {
+    padding: 85px 0 100px;
+}
+
+
+/* =========================================
+FILTERS
+========================================= */
+
+.filter-card {
+    background: white;
+    padding: 28px;
+    border-radius: 24px;
+    position: sticky;
+    top: 25px;
+    border: 1px solid var(--border);
+}
+
+.filter-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-heading span,
+.results-label {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 0;
+}
+
+.filter-heading h4 {
+    font-weight: 700;
+    margin: 2px 0 0;
+}
+
+.filter-heading button {
+    border: none;
+    background: transparent;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.filter-group {
+    margin-top: 28px;
+}
+
+.filter-group > label {
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.filter-divider {
+    height: 1px;
+    background: var(--border);
+    margin-top: 28px;
+}
+
+.bedroom-options {
+    display: flex;
+    gap: 7px;
+}
+
+.bedroom-btn {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 12px;
+}
+
+.bedroom-btn.active,
+.bedroom-btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.feature-check {
+    margin-top: 14px;
+}
+
+.feature-check label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    color: #515c56;
+}
+
+.feature-check input {
+    accent-color: var(--primary);
+}
+
+
+/* =========================================
+TOOLBAR
+========================================= */
+
+.results-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.results-toolbar h3 {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.toolbar-actions select {
+    border: 1px solid var(--border);
+    background: white;
+    padding: 12px 16px;
+    border-radius: 13px;
+    outline: none;
+}
+
+.view-switcher {
+    background: white;
+    padding: 5px;
+    border-radius: 13px;
+    border: 1px solid var(--border);
+}
+
+.view-switcher button {
+    width: 39px;
+    height: 39px;
+    border: none;
+    background: transparent;
+    border-radius: 9px;
+}
+
+.view-switcher button.active {
+    background: var(--primary);
+    color: white;
+}
+
+
+/* =========================================
+ACTIVE FILTERS
+========================================= */
+
+.active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.filter-chip {
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 8px 13px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+PROPERTY GRID
+========================================= */
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.listing-card {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: .3s ease;
+}
+
+.listing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(20, 40, 30, .1);
+}
+
+.listing-image {
+    height: 245px;
+    position: relative;
+    overflow: hidden;
+}
+
+.listing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.listing-card:hover .listing-image img {
+    transform: scale(1.05);
+}
+
+.property-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: white;
+    padding: 7px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.save-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .94);
+    font-size: 18px;
+}
+
+.save-btn.saved {
+    color: #d43b4f;
+}
+
+.listing-body {
+    padding: 22px;
+}
+
+.listing-location {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.listing-body h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.listing-meta {
+    display: flex;
+    gap: 18px;
+    color: #66716b;
+    font-size: 13px;
+    margin: 18px 0;
+}
+
+.listing-footer {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+.listing-price strong {
+    display: block;
+    font-size: 21px;
+    color: var(--primary);
+}
+
+.listing-price small {
+    color: var(--muted);
+}
+
+.details-btn {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+}
+
+.details-btn:hover {
+    background: var(--gold);
+    color: #111;
+}
+
+
+/* =========================================
+LIST VIEW
+========================================= */
+
+.property-grid.list-view {
+    grid-template-columns: 1fr;
+}
+
+.property-grid.list-view .listing-card {
+    display: grid;
+    grid-template-columns: 310px 1fr;
+}
+
+.property-grid.list-view .listing-image {
+    height: 100%;
+    min-height: 260px;
+}
+
+
+/* =========================================
+EMPTY STATE
+========================================= */
+
+.empty-state {
+    text-align: center;
+    background: white;
+    padding: 70px 30px;
+    border-radius: 24px;
+}
+
+.empty-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 30px;
+}
+
+.reset-btn {
+    margin-top: 15px;
+    border: none;
+    background: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+}
+
+
+/* =========================================
+FOOTER
+========================================= */
+
+.listings-footer {
+    background: #071e17;
+    color: white;
+    padding: 45px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-inner h3 span {
+    color: var(--gold);
+}
+
+.footer-inner p {
+    color: rgba(255, 255, 255, .6);
+    margin: 0;
+}
+
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .listing-search {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .search-field {
+        border: 1px solid var(--border);
+        border-radius: 15px;
+    }
+
+    .search-btn {
+        grid-column: span 2;
+    }
+
+    .filter-card {
+        position: static;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .listings-header {
+        padding: 65px 0 100px;
+    }
+
+    .listing-search {
+        grid-template-columns: 1fr;
+    }
+
+    .search-btn {
+        grid-column: auto;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .results-toolbar {
+        align-items: flex-start;
+        gap: 18px;
+        flex-direction: column;
+    }
+
+    .property-grid.list-view .listing-card {
+        display: block;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
